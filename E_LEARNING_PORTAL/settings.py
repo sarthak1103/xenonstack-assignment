@@ -26,8 +26,8 @@ SECRET_KEY = 'y%fe#zy)3j7--g)2!3rr&)0*(df$7-k-+gnd6l$21n=q7&(jx#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,4 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'UIC_LEARNING' ,'static'),
 ]
-# django_heroku.settings(locals())
+# django_heroku.settings(locals())import django_heroku
+
+import django_on_heroku
+django_on_heroku.settings(locals())
